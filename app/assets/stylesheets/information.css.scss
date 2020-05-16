@@ -1,5 +1,5 @@
-// Place all the styles related to the Orders controller here.
-// They will automatically be included in application.css.scss.
+// Place all the styles related to the Information controller here.
+// They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 $dark_grey: #2B2E2E;
@@ -58,3 +58,10 @@ a:link    { color: lightgreen }
 a:visited { color: $green; }
 a:hover   { color: #2B2E2E }
 a:active  { color: #33CD99 }
+
+.para {
+  font-family: "Source Code Pro", Monaco, monospace;
+  font-size: 19px;
+  color: $dark_grey;
+  text-shadow: 1px 1px 1px $green;
+}

@@ -1,2 +1,24 @@
-<h1>Calculations#new</h1>
-<p>Find me in app/views/calculations/new.html.erb</p>
+<div>
+  <h2 class="head">Create Calculations</h2>
+
+  <%= form_for(:calculation, :url => {:action => 'create'}) do |f| %>
+
+    <table>
+      <tr>
+        <th style="font-size: 28px; padding-left: -200px;">Order ID :</th>
+        <td><%= f.text_field(:order_id) %></td><br />
+      </tr>
+      <tr>
+        <th style="font-size: 28px;">Price </th>
+        <td><%= f.text_field(:price) %></td>
+      </tr>
+      <tr>
+        <th style="font-size: 28px;">Quantity </th>
+        <td><%= f.text_field(:quantity) %></td>
+      </tr>
+    </table>
+    <br />
+    <%# submit_tag("Create Order") %>
+    <button class="signup">Create Calculation</button>
+  <% end %>
+</div>

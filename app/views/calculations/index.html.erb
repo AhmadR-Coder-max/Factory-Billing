@@ -1,26 +1,12 @@
-<h1> Calculations </h1>
-
-<table border="5px" align="center" width="85%" length='100%'>
-<thead>
-		<tr>
-			<th>Name</th>
-			<th>Price</th>
-			<th>Quantity</th>
-			<th>Total</th>
-		</tr>
-</thead>
-<tbody>
-	<% @calculations.each do |c| %>	
-		<tr>
-			<td><%= c.name %>   			</td>
-			<td><%= c.price %>				</td>
-			<td><%= c.quantity %>			</td>
-			<td><%= c.price * c.quantity %> </td>
-		</tr>
-	<% end %>
-</tbody>
+<h1 class="head"> Calculations </h1>
 
 
+  <% @calculations.each do |order| %>
+    <h3><%= link_to order.name, {:action => 'show', :id => order.id}, class: :title %></h3>
+    <p class="others"><%= order.total %></p><br /><br />
+  <% end %>
 
+  <br /><br />
 
-</table>	 
+  <h3><a class="signup" href="/calculations/new">Create Calculation</a></h3>
+  <h3><a class="signup" href="/orders/index">Orders</a> </h3>

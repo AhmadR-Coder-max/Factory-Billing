@@ -1,2 +1,25 @@
-<h1>Calculations#show</h1>
-<p>Find me in app/views/calculations/show.html.erb</p>
+<h1 class="head">See Calculations</h1>
+
+<hr style="color: #33CD99;" />
+<h2 style="padding-left: 40px;">Calculation For :</h2><br />
+<h3 style="padding-left: 150px;"><%= @calculation.name %></h3>
+<hr style="color: #33CD99;" />
+<br />
+<hr style="color: #33CD99;" />
+<h2 style="padding-left: 40px;">Price :</h2><br />
+<h3 style="padding-left: 150px;"><%= @calculation.price %></h3>
+<hr style="color: #33CD99;" />
+<br />
+<hr style="color: #33CD99;" />
+<h2 style="padding-left: 40px;">Quantity :</h2><br />
+<h3 style="padding-left: 150px;"><%= @calculation.quantity %></h3>
+<hr style="color: #33CD99;" />
+<br />
+<hr style="color: #33CD99;" />
+<h2 style="padding-left: 40px;">Total :</h2><br />
+<h3 style="padding-left: 150px;"><%= @calculation.quantity * @calculation.price %></h3>
+<hr style="color: #33CD99;" />
+<br /><br />
+<%= link_to "Edit", {action: 'edit', id: @calculation.id}, class: :signup %>
+<%= link_to "Delete", {action: 'delete', id: @calculation.id}, class: :signup %>
+<%= link_to "<< Back", {action: 'index'}, class: :signup %>
