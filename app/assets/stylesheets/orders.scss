@@ -1,3 +1,56 @@
 // Place all the styles related to the Orders controller here.
-// They will automatically be included in application.css.
+// They will automatically be included in application.css.scss.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+$dark_grey: #2B2E2E;
+$light_gray: #C0C1C1;
+$green: #33CD99;
+
+* {
+  color: #2B2E2E;
+}
+
+.head {
+  font-size: 2.5em;
+  font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font-weight: bolder;
+  text-decoration: blink;
+  text-shadow: -2px 0 $green, 0 2px $green, 2px 0 $green, 0 -2px $green;
+  text-align: center;
+  color: $dark_grey;
+}
+a.signup {
+  display: block;
+  background-color: #eaf1dd;
+  color: #060;
+  text-decoration: none;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.5em;
+  padding: 6px 4px;
+  margin: 4px;
+  border-right: 2px solid #999999;
+  border-bottom: 2px solid #999999;
+  border-top-width: 0px;
+  border-left-width: 0px;
+}
+.title {
+  text-decoration: none;
+  font-size: 25px;
+  padding-left: 30px;
+}
+.others {
+  padding-left: 60px;
+  color: $dark_grey;
+}
+.warn {
+  font-size: 25px;
+  color: indianred;
+  text-align: center;
+  text-shadow: 5px 5px 5px red;
+}
+.name_ {
+  font-size: 40px;
+  text-align: center;
+  color: $dark_grey;
+  text-shadow: 4px 4px 4px $green;
+}

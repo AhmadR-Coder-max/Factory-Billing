@@ -1,0 +1,25 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.scss.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.signup {
+  text-decoration: none;
+  font-size: 40px;
+  text-align: center;
+  display: block;
+}
+
+a.signup {
+  display: block;
+  background-color: #eaf1dd;
+  color: #060;
+  text-decoration: none;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.5em;
+  padding: 6px 4px;
+  margin: 4px;
+  border-right: 2px solid #999999;
+  border-bottom: 2px solid #999999;
+  border-top-width: 0px;
+  border-left-width: 0px;
+}

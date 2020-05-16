@@ -1,0 +1,26 @@
+<h1> Calculations </h1>
+
+<table border="5px" align="center" width="85%" length='100%'>
+<thead>
+		<tr>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Quantity</th>
+			<th>Total</th>
+		</tr>
+</thead>
+<tbody>
+	<% @calculations.each do |c| %>	
+		<tr>
+			<td><%= c.name %>   			</td>
+			<td><%= c.price %>				</td>
+			<td><%= c.quantity %>			</td>
+			<td><%= c.price * c.quantity %> </td>
+		</tr>
+	<% end %>
+</tbody>
+
+
+
+
+</table>	 

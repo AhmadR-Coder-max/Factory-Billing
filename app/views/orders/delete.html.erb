@@ -1,0 +1,14 @@
+<div>
+  <h2 class="head">Delete Orders</h2>
+
+  <%= form_for(:order, :url => {:action => 'destroy', :id => @order.id}) do |f| %>
+
+    <p class="warn">Are you sure you want to permanently delete this order? </p>
+    <p class="name_"><%= @order.name %></p>
+    <div class="form-buttons">
+      <%# submit_tag("Delete Order") %><br />
+      <button class="signup">Delete Order</button>
+    </div>
+
+  <% end %>
+</div>

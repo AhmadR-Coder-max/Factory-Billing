@@ -1,0 +1,22 @@
+<div>
+  <h2 class="head">Update Order</h2>
+
+  <%= form_for(:order, :url => {:action => 'update', :id => @order.id}) do |f| %>
+
+    <table summary="Subject form fields">
+      <tr>
+        <th style="font-size: 28px;">Name </th>
+        <td><%= f.text_field(:name) %></td>
+      </tr>
+      <tr>
+        <th style="font-size: 28px;">Description </th>
+        <td><%= f.text_field(:description) %></td>
+      </tr>
+    </table>
+    <div class="form-buttons">
+      <%# submit_tag("Update Order") %><br />
+      <button class="signup">Update Order</button>
+    </div>
+
+  <% end %>
+</div>

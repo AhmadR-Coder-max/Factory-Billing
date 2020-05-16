@@ -1,0 +1,36 @@
+<h1 class="head">Orders</h1>
+<!--
+<table>
+  <thead>
+  <tr>
+    <td>Name of Product</td>
+    <td>Condition Description</td>
+    <td>Actions</td>
+  <tbody>
+  <%# @orders.each do |order| %>
+    <tr>
+      <td><%# order.name %></td>
+      <td><%# order.description %></td>
+      <td>
+        <%# link_to 'Show', {:action => 'show', :id => order.id} %>
+        <%# link_to 'Edit', {:action => 'edit', :id => order.id} %>
+        <%# link_to 'Delete', {:action => 'delete', :id => order.id} %>
+      </td>
+      <%# end %>
+    </tr>
+
+  </tbody>
+</table>
+-->
+
+<% @orders.each do |order| %>
+  <h3><%= link_to order.name, {:action => 'show', :id => order.id}, class: :title %></h3>
+  <p class="others"><%= order.created_at %></p><br /><br />
+<% end %>
+
+<br />
+<br />
+<h3><a class="signup" href="/orders/new">Create Order</a></h3>
+<h3><a class="signup" href="/calculations/index">Calculations</a> </h3>
+<div id="result"></div>
+

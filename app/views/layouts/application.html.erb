@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FactoryBilling</title>
+    <title>Factory Billing</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application',  'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <header class="header">
+    <br />
+    <!--<a class="name" href="/orders/index">HOME</a>-->
+    <%= link_to "HOME", root_path, class: :name %>
+    <% if user_signed_in? %>
+      <%= link_to "New Order", {:controller => 'orders', :action => 'new'}, class: :side %>
+      <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: :side %>
+    <% else %>
+      <%= link_to "Sign Up", new_user_registration_path, class: :side %>
+    <% end %>
+  </header>
+  <div class="inner"></div>
+  <% if flash[:errors] %>
+    <% flash[:errors].each do |e| %>
+      <p><%= e %></p>
+    <% end %>
+  <% end %>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <%= yield %>
+
   </body>
 </html>

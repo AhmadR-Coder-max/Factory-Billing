@@ -1,0 +1,20 @@
+<div>
+  <h2 class="head">Create Orders</h2>
+
+  <%= form_for(:order, :url => {:action => 'create'}) do |f| %>
+
+    <table summary="Subject form fields">
+      <tr>
+        <th style="font-size: 28px; padding-left: -200px;">Name :</th>
+        <td><%= f.text_field(:name) %></td><br />
+      </tr>
+      <tr>
+        <th style="font-size: 28px;">Description </th>
+        <td><%= f.text_field(:description) %></td>
+      </tr>
+    </table>
+    <br />
+      <%# submit_tag("Create Order") %>
+    <button class="signup">Create Order</button>
+  <% end %>
+</div>
