@@ -16,6 +16,7 @@ class OrdersController < ApplicationController
   def create
     @order = current_user.orders.build(order_params)
     if @order.save
+      flash[:notice] = "Order Created Successfully."
       redirect_to(action: :index)
     else
       render 'new'
@@ -29,6 +30,7 @@ class OrdersController < ApplicationController
   def update
     @order = Order.find(params[:id])
     if @order.update_attributes(order_params)
+      flash[:notice] = "Order Updated Successfully."
       redirect_to(action: 'show', :id => @order.id)
     else
       render 'edit'
@@ -41,6 +43,7 @@ class OrdersController < ApplicationController
 
   def destroy
     order = Order.find(params[:id]).destroy
+    flash[:notice] = "Order '#{order.name}' Destroyed Successfully."
     redirect_to(:action => "index")
   end
 

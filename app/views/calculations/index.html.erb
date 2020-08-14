@@ -1,12 +1,17 @@
 <h1 class="head"> Calculations </h1>
 
+<%# cal = @calculations.first.id %>
+<%# a = Calculation.find(cal) %>
+<%# a = a.order_id %>
+<%# b = Order.find(a) %>
+<%#= b.name %>
 
-  <% @calculations.each do |order| %>
-    <h3><%= link_to order.name, {:action => 'show', :id => order.id}, class: :title %></h3>
-    <p class="others"><%= order.total %></p><br /><br />
-  <% end %>
+<% @calculations.each do |order| %>
+  <h3><%= link_to order.name, {:action => 'show', :id => order.id}, class: :title %></h3>
+  <p class="others"><%= order.quantity * order.price %></p><br /><br />
+<% end %>
 
-  <br /><br />
+<br /><br />
 
-  <h3><a class="signup" href="/calculations/new">Create Calculation</a></h3>
-  <h3><a class="signup" href="/orders/index">Orders</a> </h3>
+<h3><a class="signup" href="/calculations/new">Create Calculation</a></h3>
+<h3><a class="signup" href="/orders/index">Orders</a> </h3><br />

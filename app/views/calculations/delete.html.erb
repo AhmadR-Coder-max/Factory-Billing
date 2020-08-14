@@ -1,2 +1,21 @@
-<h1>Calculations#delete</h1>
-<p>Find me in app/views/calculations/delete.html.erb</p>
+<div>
+  <h2 class="head">Delete Calculations</h2>
+
+  <%= form_for(:calculation, :url => {:action => 'destroy', :id => @calculation.id}) do |f| %>
+
+    <p class="warn">Are you sure you want to permanently delete this calculation? </p>
+    <!--<p class="name_"><%# @calculation.name %></p>-->
+    <% cal = @calculation.id %>
+    <% a = Calculation.find(cal) %>
+    <% a = a.order_id %>
+    <% b = Order.find(a) %>
+    <p class="name_"><%= b.name %></p>
+    <div class="form-buttons">
+      <%# submit_tag("Delete Order") %><br />
+      <button class="signup">Delete Calculation</button>
+    </div>
+
+  <% end %>
+</div>
+
+<%= link_to 'Cancel', {controller: 'calculations', action: 'index'}, class: :signup %>

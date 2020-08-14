@@ -64,4 +64,23 @@ a:active  { color: #33CD99 }
   font-size: 19px;
   color: $dark_grey;
   text-shadow: 1px 1px 1px $green;
+  padding-left: 40px;
+  text-align: center;
+}
+.experiences{
+  padding: 30px;
+  margin: 30px;
+  background-color: rgb(238, 251, 255);
+  border-radius: 20px;
+}
+.experience-item{
+  padding: 10px;
+  border-left: 1px solid rgba(137, 130, 247, .2);
+  font-size: 18px;
+}
+.sign {
+  font-size: 25px;
+  color: $dark_grey;
+  letter-spacing: 0.1em;
+  word-spacing: 0.1em;
 }

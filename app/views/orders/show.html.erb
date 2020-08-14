@@ -1,26 +1,8 @@
-<div>
-  <h2 class="head">Show Order</h2>
-<!--
-  <table>
-    <tr>
-      <th style="font-size: 25px; padding-left: 40px;">Name :</th>
-      <td style="font-size: 20px;"></td>
-    </tr>
-    <tr>
-      <th>Description</th><br />
-      <td></td>
-    </tr>
-    <tr>
-      <th>Created</th>
-      <td></td>
-    </tr>
-    <tr>
-      <th>Updated</th>
-      <td></td>
-    </tr>
-  </table>
-</div>
--->
+<h2 class="head">Show Order</h2>
+
+<hr style="color: #33CD99;" />
+<h2 style="padding-left: 40px;">Order ID :</h2><br />
+<h3 style="padding-left: 150px;"><%= @order.id %></h3>
 <hr style="color: #33CD99;" />
 <h2 style="padding-left: 40px;">Name :</h2><br />
 <h3 style="padding-left: 150px;"><%= @order.name %></h3>
@@ -41,5 +23,14 @@
 <h3 style="padding-left: 150px;"><%= @order.updated_at %></h3>
 <hr style="color: #33CD99;" />
 <br /><br />
+<% order = Order.find(params[:id]) %>
+<% cal = order.calculation %>
+<% if cal.blank? %>
+  <a class="signup" href="/calculations/new" >Also create Calculation </a>
+<% end %>
+
 <%= link_to "Edit", {action: 'edit', id: @order.id}, class: :signup %>
 <%= link_to "Delete", {action: 'delete', id: @order.id}, class: :signup %>
+<% if !@order.calculation.blank? %>
+  <%= link_to "Calculations", {controller: 'calculations', action: 'show', id: @order.calculation.id}, class: :signup %>
+<% end %>

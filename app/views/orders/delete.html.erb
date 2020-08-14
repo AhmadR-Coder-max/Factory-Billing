@@ -10,5 +10,14 @@
       <button class="signup">Delete Order</button>
     </div>
 
+    <% ord = @order %>
+    <% a = ord.calculation %>
+    <%# b = Calculation.find(a) %>
+    <%# b.name %>
+    <% if !a.blank? %>
+      <%= link_to 'Also Delete Calculation', {controller: 'calculations', action: 'delete', id: a.id}, class: :signup %>
+    <% end %>
   <% end %>
 </div>
+
+<%= link_to 'Cancel', {controller: 'orders', action: 'index'}, class: :signup %>

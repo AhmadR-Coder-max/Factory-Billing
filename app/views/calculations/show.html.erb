@@ -1,8 +1,13 @@
 <h1 class="head">See Calculations</h1>
-
+<% cal = @calculation.id %>
+<% a = Calculation.find(cal) %>
+<% a = a.order_id %>
+<% b = Order.find(a) %>
+<% b.name %>
 <hr style="color: #33CD99;" />
 <h2 style="padding-left: 40px;">Calculation For :</h2><br />
-<h3 style="padding-left: 150px;"><%= @calculation.name %></h3>
+<%#  %>
+<h3 style="padding-left: 150px;"><%= link_to b.name, {controller: 'orders', action: 'show', id: b}, class: :_name %></h3>
 <hr style="color: #33CD99;" />
 <br />
 <hr style="color: #33CD99;" />
